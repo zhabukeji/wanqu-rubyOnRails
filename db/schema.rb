@@ -10,16 +10,22 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_04_08_201306) do
+ActiveRecord::Schema[7.0].define(version: 2023_04_08_205350) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "users", force: :cascade do |t|
-    t.string "username"
-    t.string "password"
+  create_table "articles", comment: "文章列表", force: :cascade do |t|
+    t.text "title"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.string "email"
+  end
+
+  create_table "users", comment: "用户表", force: :cascade do |t|
+    t.string "username", null: false, comment: "用户名"
+    t.string "password", null: false, comment: "密码"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string "email", null: false
     t.string "head_profile"
     t.text "profile"
   end
