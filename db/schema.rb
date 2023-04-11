@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_04_11_141342) do
+ActiveRecord::Schema[7.0].define(version: 2023_04_11_151606) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -18,9 +18,9 @@ ActiveRecord::Schema[7.0].define(version: 2023_04_11_141342) do
     t.text "title"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.text "profile", comment: "上下文"
-    t.text "content", default: "内容", null: false, comment: "内容"
-    t.string "writer", default: "writer", null: false, comment: "文章作者"
+    t.text "profile", null: false, comment: "上下文"
+    t.text "content", default: "内容", null: false, comment: "上下文"
+    t.string "writer", default: "作者", null: false, comment: "文章作者"
     t.integer "views", default: 1, null: false, comment: "浏览量"
   end
 
