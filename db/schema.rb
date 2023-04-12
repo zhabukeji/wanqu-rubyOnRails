@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_04_12_140018) do
+ActiveRecord::Schema[7.0].define(version: 2023_04_12_230122) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -22,6 +22,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_04_12_140018) do
     t.text "content", default: "内容", null: false, comment: "上下文"
     t.string "writer", default: "作者", null: false, comment: "文章作者"
     t.integer "views", default: 1, null: false, comment: "浏览量"
+    t.string "status", default: "200", null: false, comment: "文章状态,可见隐藏置顶等"
   end
 
   create_table "users", comment: "用户表", force: :cascade do |t|
