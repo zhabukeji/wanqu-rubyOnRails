@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   # 相关文档: https://guides.rubyonrails.org/routing.html
   # 可使用命令行'rails routes'查看当前项目路由
+  root "application#index"
   get 'articles/index'
   # 设置article的index设置为默认 并将别名设置为article
   get 'articles', to: 'articles#index', as: 'article' 
