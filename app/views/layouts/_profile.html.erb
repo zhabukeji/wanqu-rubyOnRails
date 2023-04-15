@@ -10,10 +10,9 @@
     <div class="blog-sidebar-widget blog-bor">
         <h2 class="blog-title"><span>人生风向标</span></h2>
         <ul class="am-list">
-            <li><a href="#">千秋邈矣独留我,百战归来再读书</a></li>
-            <li><a href="#">道德构建的是理想社会，而经济学构建的是现实社会</a></li>
-            <li><a href="#">天行健，君子以自强不息。地势坤，君子以厚德载物</a></li>
-            <li><a href="#">天地不仁，以万物为刍狗。圣人不仁，以百姓为刍狗</a></li>
+            <% @wisdoms.each do |wisdom|%>
+            <li><a href="#"><%= wisdom.context%></a></li>
+            <% end %>
         </ul>
     </div>
 </div>
