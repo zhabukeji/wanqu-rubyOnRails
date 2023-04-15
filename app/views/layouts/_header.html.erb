@@ -10,9 +10,12 @@
 
   <div class="am-collapse am-topbar-collapse" id="blog-collapse">
     <ul class="am-nav am-nav-pills am-topbar-nav">
-      <li class="am-active"><a href="lw-index.html">首页</a></li>
-      <li><a href="lw-article.html">文章</a></li>
-      <li><a href="lw-timeline.html">时间线</a></li>
+      <% @topbars.each do |topbar|
+       %>
+      <li class="am-active"><a href="lw-index.html">
+        <%= topbar.name %>
+      </a></li>
+      <% end %>
     </ul>
   </div>
 </nav>
