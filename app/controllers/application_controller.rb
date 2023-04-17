@@ -3,6 +3,7 @@ class ApplicationController < ActionController::Base
         @articles = Article.all
         @topbars = Topbar.getTopbarList
         @wisdoms = Wisdom.all
+        @title = '玩趣 | 博客首页'
     end
     def test
         render 
