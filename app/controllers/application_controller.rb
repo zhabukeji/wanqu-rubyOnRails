@@ -6,6 +6,6 @@ class ApplicationController < ActionController::Base
         @title = '玩趣 | 博客首页'
     end
     def test
-        render 
+        render inline: "index"
     end
 end
