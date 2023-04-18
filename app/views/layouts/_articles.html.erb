@@ -1,10 +1,3 @@
-<% # cache do %>
-<%= render "layouts/header"%>
-<% # end -%>
-<!-- content srart -->
-<div class="am-g am-g-fixed blog-fixed">
-<div class="am-u-md-8 am-u-sm-12">
-<% # = render partial: "layouts/articles", collection: articles, as:article %>
 <article class="am-g blog-entry-article">
     <div class="am-u-lg-6 am-u-md-12 am-u-sm-12 blog-entry-img">
         <%= image_tag "f10.jpg", class: "am-u-sm-12" %>
@@ -19,15 +12,3 @@
         <p><a href="" class="blog-continue">continue reading</a></p>
     </div>
 </article>
-<ul class="am-pagination">
-<li class="am-pagination-prev"><a href="">&laquo; Prev</a></li>
-<li class="am-pagination-next"><a href="">Next &raquo;</a></li>
-</ul>
-</div>
-<% # cache do %>
-<%= render "layouts/profile"%>
-<% # end -%>
-</div>
-<% # cache do %>
-<%= render "layouts/footer"%>
-<% # end -%>
