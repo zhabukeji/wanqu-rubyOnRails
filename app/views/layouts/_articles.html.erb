@@ -5,7 +5,9 @@
     <div class="am-u-lg-6 am-u-md-12 am-u-sm-12 blog-entry-text">
         <span><a href="" class="blog-color">article &nbsp;</a></span>
         <span> @<%= article.writer %> &nbsp;</span>
-        <span>2015/10/9</span>
+        <span>
+            <%= distance_of_time_in_words Time.now, article.updated_at %>
+        </span>
         <h1>
             <a href="">
                 <%= article.title %>
