@@ -1,20 +1,9 @@
-<% # cache do %>
-<%= render "layouts/header"%>
-<% # end -%>
 <!-- content srart -->
-<div class="am-g am-g-fixed blog-fixed">
-<div class="am-u-md-8 am-u-sm-12">
+
 <%= render partial: "layouts/articles", collection: @articles, as: :article %>
 
 <ul class="am-pagination">
-<li class="am-pagination-prev"><a href="">&laquo; Prev</a></li>
-<li class="am-pagination-next"><a href="">Next &raquo;</a></li>
+    <li class="am-pagination-prev"><a href="">&laquo; Prev</a></li>
+    <li class="am-pagination-next"><a href="">Next &raquo;</a></li>
 </ul>
-</div>
-<% # cache do %>
-<%= render "layouts/profile"%>
-<% # end -%>
-</div>
-<% # cache do %>
-<%= render "layouts/footer"%>
-<% # end -%>
+
