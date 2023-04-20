@@ -26,7 +26,17 @@
   </head>
 
   <body id="blog">
+    <% # cache do %>
+    <%= render "layouts/header"%>
+    <% # end -%>
     <%= yield %>
+    <% # cache do %>
+    <%= render "layouts/profile"%>
+    <% # end -%>
+    </div>
+    <% # cache do %>
+    <%= render "layouts/footer"%>
+    <% # end -%>
     <%= javascript_include_tag "jquery.min", "amazeui.min" %>
   </body>
 </html>
