@@ -10,7 +10,8 @@
     <div class="blog-sidebar-widget blog-bor">
         <h2 class="blog-title"><span>人生风向标</span></h2>
         <ul class="am-list">
-                <% @wisdoms.each do |wisdom|%>
+                <% wisdoms = getWisdoms
+                   wisdoms.each do |wisdom| %>
                     <li><a href="#"><%= wisdom.context %></a></li>
                 <% end -%>
         </ul>

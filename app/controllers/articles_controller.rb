@@ -1,7 +1,5 @@
 class ArticlesController < ApplicationController
   def index
-    @topbars = Topbar.getTopbarList
-    @wisdoms = Wisdom.all
   end
   def show
     @article = Article.findby(params[:id])

@@ -10,7 +10,8 @@
 
   <div class="am-collapse am-topbar-collapse" id="blog-collapse">
     <ul class="am-nav am-nav-pills am-topbar-nav">
-        <% @topbars.each do |topbar|
+        <% topbars = getTopbars
+           topbars.each do |topbar|
         %>
         <li class="am-active"><a href="lw-index.html">
           <%= topbar.name %>
