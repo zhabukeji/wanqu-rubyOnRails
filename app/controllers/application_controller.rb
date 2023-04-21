@@ -1,11 +1,11 @@
 class ApplicationController < ActionController::Base
-    def index
+    # 设置csrf验证不正确处理方法
+    protect_from_forgery with: :exception
+    before_action :somedata
+    private
+    def somedata
         @articles = Article.all
         @topbars = Topbar.getTopbarList
         @wisdoms = Wisdom.all
-        @title = '玩趣 | 博客首页'
-    end
-    def test
-        render inline: "index"
     end
 end
