@@ -1,4 +1,4 @@
-class CreateTopbar < ActiveRecord::Migration[7.0]
+class CreateTopbars < ActiveRecord::Migration[7.0]
   def change
     create_table :topbars do |t|
       t.string :name, null: false, comment: '类别名称'
